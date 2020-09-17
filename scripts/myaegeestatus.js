@@ -68,10 +68,7 @@ module.exports = (robot) => {
 
       try {
         const data = JSON.parse(body)
-        let message = "Something went wrong!"
-        if (data.success) {
-          message = `Service ${service} has version ${data.data.version} deployed`
-        }
+        let message = data.success ? `Service ${service} has version ${data.data.version} deployed` : "Something went wrong!"
         return res.send(message)
       } catch (error) {
           robot.logger.error(error)
