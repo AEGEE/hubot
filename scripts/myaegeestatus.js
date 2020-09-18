@@ -77,4 +77,30 @@ module.exports = (robot) => {
     })
   })
   
+  robot.hear(/which is last (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
+      
+    const service = res.match[1]
+    const base_url = `https://api.github.com/repos/AEGEE/${service}/git/refs/tags`
+
+    robot.http(base_url)
+      .header('Accept', 'application/json')
+      .get() ( (err, response, body) => {
+
+      // err & response status checking code here
+      if (err != null || response.headers['content-type'].indexOf('application/json') === -1) {
+        robot.logger.error(err)
+        return res.send("An error occurred, or the answer was not JSON :(")
+      }
+
+      try {
+        const data = JSON.parse(body)
+        let message = `Last released version of ${service} is ${data[data.length-1].ref.replace('refs/tags/', '')}`
+        return res.send(message)
+      } catch (error) {
+          robot.logger.error(error)
+          return res.send("Ran into an error parsing JSON :(")
+      }
+    })
+  })
+
 }
