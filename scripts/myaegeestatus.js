@@ -102,7 +102,7 @@ module.exports = (robot) => {
 
       try {
         const data = JSON.parse(body)
-        let message = `Last released version of ${service} is ${data[data.length-1].ref.replace('refs/tags/', '')}`
+        let message = `Last released version of \`${service}\` is \`${data[data.length-1].ref.replace('refs/tags/', '')}\``
         return res.send(message)
       } catch (error) {
           robot.logger.error(error)
