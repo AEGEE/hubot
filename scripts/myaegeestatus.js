@@ -30,36 +30,42 @@
 // Author:
 //   https://github.com/linuxbandit
 
+const { alwaysThread } = require('../utils/helpers');
+
 module.exports = (robot) => {
   robot.hear(/what status is (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
-      
-      const service = res.match[1]
-      const base_url = "https://my.aegee.eu"
-      const path = (service === "frontend" ? "/healthcheck" : `/api/${service}/healthcheck`)
 
-      robot.http(base_url + path)
-        .header('Accept', 'application/json')
-        .get() ( (err, response, body) => {
+    alwaysThread(res)
 
-        // err & response status checking code here
-        if (err != null || response.headers['content-type'].indexOf('application/json') === -1) {
-          robot.logger.error(err)
-          return res.send("An error occurred, or the answer was not JSON :(")
-        }
+    const service = res.match[1]
+    const base_url = "https://my.aegee.eu"
+    const path = (service === "frontend" ? "/healthcheck" : `/api/${service}/healthcheck`)
 
-        try {
-          const data = JSON.parse(body)
-          let health = data.success ? 'HEALTHY :ok:' : ':warning: UNHEALTHY :warning:'
-          return res.send(`Service ${service} is ${health}`)
-        } catch (error) {
-            robot.logger.error(error)
-            return res.send("Ran into an error parsing JSON :(")
-        }
-      })
+    robot.http(base_url + path)
+      .header('Accept', 'application/json')
+      .get() ( (err, response, body) => {
+
+      // err & response status checking code here
+      if (err != null || response.headers['content-type'].indexOf('application/json') === -1) {
+        robot.logger.error(err)
+        return res.send("An error occurred, or the answer was not JSON :(")
+      }
+
+      try {
+        const data = JSON.parse(body)
+        let health = data.success ? 'HEALTHY :ok:' : ':warning: UNHEALTHY :warning:'
+        return res.send(`Service ${service} is ${health}`)
+      } catch (error) {
+          robot.logger.error(error)
+          return res.send("Ran into an error parsing JSON :(")
+      }
+    })
   })
 
   robot.hear(/what version is (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
-      
+
+    alwaysThread(res)
+
     const service = res.match[1]
     const base_url = "https://my.aegee.eu"
     const path = (service === "frontend" ? "/healthcheck" : `/api/${service}/healthcheck`)
@@ -86,7 +92,9 @@ module.exports = (robot) => {
   })
   
   robot.hear(/which is last (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
-      
+
+    alwaysThread(res)
+
     const service = res.match[1]
     const base_url = `https://api.github.com/repos/AEGEE/${service}/git/refs/tags`
 

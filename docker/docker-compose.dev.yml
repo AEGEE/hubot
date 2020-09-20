@@ -9,3 +9,4 @@ services:
     image: aegee/hubot:dev
     volumes:
       - "./${PATH_HUBOT}/../scripts:/home/hubot/scripts:ro"
+      - "./${PATH_HUBOT}/../utils:/home/hubot/utils:ro"
