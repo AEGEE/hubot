@@ -14,10 +14,10 @@
 // Author:
 //   https://stackoverflow.com/a/25169120/1892660
 
-module.exports = function(robot) {
-  robot.respond(/is it (weekend|holiday)\s?\?/i, function(msg){
-      var today = new Date();
+module.exports = function (robot) {
+    robot.respond(/is it (weekend|holiday)\s?\?/i, (msg) => {
+        const today = new Date();
 
-      msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
-  });
-}
+        msg.reply(today.getDay() === 0 || today.getDay() === 6 ? 'YES' : 'NO');
+    });
+};

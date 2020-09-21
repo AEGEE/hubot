@@ -17,7 +17,7 @@ const { NodeSSH } = require('node-ssh');
 const path = require('path');
 const fs = require('fs');
 
-const allowedServices = ["frontend", "core", "events", "statutory", "discounts", "mailer"];
+const allowedServices = ['frontend', 'core', 'events', 'statutory', 'discounts', 'mailer'];
 
 module.exports = (robot) => {
     robot.hear(/deploy (.*) to (.*)/i, async (msg) => {
@@ -34,13 +34,13 @@ module.exports = (robot) => {
         }
 
         if (environment !== 'production') {
-            return msg.reply(`Unknown environment: "${environment}". Allowed environments: "production".`)
+            return msg.reply(`Unknown environment: "${environment}". Allowed environments: "production".`);
         }
 
         if (!allowedServices.includes(service)) {
             return msg.reply(`Unknown service: "${service}". Allowed services: "${allowedServices.join('", "')}".`);
         }
-        
+
         const ssh = new NodeSSH();
 
         try {
@@ -52,7 +52,7 @@ module.exports = (robot) => {
                 privateKey
             });
         } catch (err) {
-            robot.logger.error(err)
+            robot.logger.error(err);
             return msg.reply(`Could not establish SSH connection: ${err}`);
         }
 
@@ -63,7 +63,7 @@ module.exports = (robot) => {
             console.log('STDOUT: ' + result.stdout);
             console.log('STDERR: ' + result.stderr);
         } catch (err) {
-            robot.logger.error(err)
+            robot.logger.error(err);
             return msg.reply(`Could not download Docker image for \`${service}\`: ${err}`);
         }
 
@@ -74,7 +74,7 @@ module.exports = (robot) => {
             console.log('STDOUT: ' + result.stdout);
             console.log('STDERR: ' + result.stderr);
         } catch (err) {
-            robot.logger.error(err)
+            robot.logger.error(err);
             return msg.reply(`Could not start service \`${service}\`: ${err}`);
         }
 

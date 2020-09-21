@@ -1,0 +1,29 @@
+{
+  "name": "hubot-slack-docker",
+  "version": "1.0.0",
+  "description": "Simple implementation, would recommend [https://github.com/minddocdev/hubot](https://github.com/minddocdev/hubot) for prod.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6"
+  },
+  "scripts": {
+    "lint": "node_modules/.bin/eslint .",
+    "lint:fix": "node_modules/.bin/eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AEGEE/hubot-slack-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AEGEE/hubot-slack-docker/issues"
+  },
+  "homepage": "https://github.com/AEGEE/hubot-slack-docker#readme"
+}
