@@ -17,10 +17,14 @@ const { NodeSSH } = require('node-ssh');
 const path = require('path');
 const fs = require('fs');
 
+const { alwaysThread } = require('../utils/helpers');
+
 const allowedServices = ['frontend', 'core', 'events', 'statutory', 'discounts', 'mailer'];
 
 module.exports = (robot) => {
     robot.hear(/deploy (.*) to (.*)/i, async (msg) => {
+        alwaysThread(msg);
+
         const service = msg.match[1];
         const environment = msg.match[2];
 
