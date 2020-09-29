@@ -1,9 +1,24 @@
 {
-  "name": "hubot-slack-docker",
-  "version": "1.0.0",
+  "name": "hubot",
+  "version": "0.1.0",
   "description": "Simple implementation, would recommend [https://github.com/minddocdev/hubot](https://github.com/minddocdev/hubot) for prod.",
-  "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "hubot": "3.3.2",
+    "hubot-auth": "^2.1.0",
+    "hubot-diagnostics": "^1.0.0",
+    "hubot-google-images": "^0.2.7",
+    "hubot-google-translate": "^0.2.1",
+    "hubot-help": "^1.0.1",
+    "hubot-heroku-keepalive": "^1.0.3",
+    "hubot-maps": "0.0.3",
+    "hubot-pugme": "^0.1.1",
+    "hubot-redis-brain": "^1.0.0",
+    "hubot-rules": "^1.0.0",
+    "hubot-scripts": "^2.17.2",
+    "hubot-shipit": "^0.2.1",
+    "hubot-slack": "^4.8.0",
+    "node-ssh": "^11.1.0"
+  },
   "devDependencies": {
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -17,13 +32,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AEGEE/hubot-slack-docker.git"
+    "url": "git+https://github.com/AEGEE/hubot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AEGEE/hubot-slack-docker/issues"
+    "url": "https://github.com/AEGEE/hubot/issues"
   },
-  "homepage": "https://github.com/AEGEE/hubot-slack-docker#readme"
+  "homepage": "https://github.com/AEGEE/hubot#readme"
 }
