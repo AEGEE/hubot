@@ -1,5 +1,5 @@
 {
-  "name": "hubot",
+  "name": "hubot-slack-docker",
   "version": "0.1.0",
   "description": "Simple implementation, would recommend [https://github.com/minddocdev/hubot](https://github.com/minddocdev/hubot) for prod.",
   "dependencies": {
