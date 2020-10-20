@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/AEGEE/hubot/compare/1.0.0...1.0.1) (2020-10-20)
+
+
+### Bug Fixes
+
+* **general:** fix external scripts ([#3](https://github.com/AEGEE/hubot/issues/3)) ([bf73e29](https://github.com/AEGEE/hubot/commit/bf73e294f5c773a6816ef29ee9e1616db2405cd5))
+
 # 1.0.0 (2020-10-20)
 
 
