@@ -9,3 +9,4 @@ services:
     volumes:
       - "./${PATH_HUBOT}/../scripts:/home/hubot/scripts:ro"
       - "./${PATH_HUBOT}/../utils:/home/hubot/utils:ro"
+      - "./${PATH_HUBOT}/../external-scripts.json:/home/hubot/external-scripts.json:ro"
