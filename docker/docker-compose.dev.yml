@@ -1,7 +1,6 @@
 version: "3.4"
 
-services: 
-
+services:
   hubot:
     build:
       context: ./${PATH_HUBOT}/..
