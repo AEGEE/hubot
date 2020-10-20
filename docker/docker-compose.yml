@@ -8,7 +8,7 @@ services:
   hubot:
     image: aegee/hubot:latest
     restart: on-failure
-    environment: 
+    environment:
       REDIS_URL: redis
       HUBOT_SLACK_TOKEN: ${HUBOT_SLACK_TOKEN}
       EXTRA_PACKAGES: "node-ssh"
