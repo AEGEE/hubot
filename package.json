@@ -29,7 +29,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
-    "semantic-release": "^17.3.1"
+    "semantic-release": "^17.3.2"
   },
   "scripts": {
     "lint": "node_modules/.bin/eslint .",
