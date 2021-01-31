@@ -8,7 +8,7 @@
 //   None
 //
 // Commands:
-//   hubot deploy (frontend|core|events|statutory|discounts|mailer) to <environment> - deploys <service> to <environment>
+//   hubot deploy (frontend|core|events|statutory|discounts|mailer|network|summeruniversity) to <environment> - deploys <service> to <environment>
 //
 // Author:
 //   https://github.com/serge1peshcoff
@@ -19,7 +19,7 @@ const fs = require('fs');
 
 const { alwaysThread } = require('../utils/helpers');
 
-const allowedServices = ['frontend', 'core', 'events', 'statutory', 'discounts', 'mailer'];
+const allowedServices = ['frontend', 'core', 'events', 'statutory', 'discounts', 'mailer', 'network', 'summeruniversity'];
 
 module.exports = (robot) => {
     robot.hear(/deploy (.*) to (.*)/i, async (msg) => {
