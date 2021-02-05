@@ -21,11 +21,17 @@
 //   - `hubot what status is mailer` - Get status of mailer
 //   - `hubot what version is mailer` - Get version of mailer
 //   - `hubot which is last mailer` - Get latest released version of mailer
+//   - `hubot what status is network` - Get status of network
+//   - `hubot what version is network` - Get version of network
+//   - `hubot which is last network` - Get latest released version of network
+//   - `hubot what status is summeruniversity` - Get status of summeruniversity
+//   - `hubot what version is summeruniversity` - Get version of summeruniversity
+//   - `hubot which is last summeruniversity` - Get latest released version of summeruniversity
 //
 // Commands:
-//   hubot what status is (frontend|core|events|statutory|discounts|mailer)
-//   hubot what version is (frontend|core|events|statutory|discounts|mailer)
-//   hubot which is last (frontend|core|events|statutory|discounts|mailer)
+//   hubot what status is (frontend|core|events|statutory|discounts|mailer|network|summeruniversity)
+//   hubot what version is (frontend|core|events|statutory|discounts|mailer|network|summeruniversity)
+//   hubot which is last (frontend|core|events|statutory|discounts|mailer|network|summeruniversity)
 //
 // Author:
 //   https://github.com/linuxbandit
@@ -33,7 +39,7 @@
 const { alwaysThread } = require('../utils/helpers');
 
 module.exports = (robot) => {
-    robot.hear(/what status is (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
+    robot.hear(/what status is (frontend|core|events|statutory|discounts|mailer|network|summeruniversity)/i, (res) => {
         alwaysThread(res);
 
         const service = res.match[1];
@@ -60,7 +66,7 @@ module.exports = (robot) => {
             });
     });
 
-    robot.hear(/what version is (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
+    robot.hear(/what version is (frontend|core|events|statutory|discounts|mailer|network|summeruniversity)/i, (res) => {
         alwaysThread(res);
 
         const service = res.match[1];
@@ -87,7 +93,7 @@ module.exports = (robot) => {
             });
     });
 
-    robot.hear(/which is last (frontend|core|events|statutory|discounts|mailer)/i, (res) => {
+    robot.hear(/which is last (frontend|core|events|statutory|discounts|mailer|network|summeruniversity)/i, (res) => {
         alwaysThread(res);
 
         const service = res.match[1];
