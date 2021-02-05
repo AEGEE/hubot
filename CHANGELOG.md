@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/AEGEE/hubot/compare/1.0.1...1.0.2) (2021-02-05)
+
+
+### Bug Fixes
+
+* **modules:** add network and summeruniversity ([#33](https://github.com/AEGEE/hubot/issues/33)) ([1880a51](https://github.com/AEGEE/hubot/commit/1880a51bad10f9df59b85156e7c13253784493f6))
+
 ## [1.0.1](https://github.com/AEGEE/hubot/compare/1.0.0...1.0.1) (2020-10-20)
 
 
