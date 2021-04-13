@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/AEGEE/hubot/compare/1.0.2...1.0.3) (2021-04-13)
+
+
+### Bug Fixes
+
+* **circleci:** update ci ([#54](https://github.com/AEGEE/hubot/issues/54)) ([c60fdc2](https://github.com/AEGEE/hubot/commit/c60fdc2c29870836b9a37380da4bdc8f235fe26e))
+
 ## [1.0.2](https://github.com/AEGEE/hubot/compare/1.0.1...1.0.2) (2021-02-05)
 
 
