@@ -56,7 +56,7 @@ module.exports = (robot) => {
         msg.reply('The clean up has started.');
 
         try {
-            const result = await ssh.execCommand('docker system prune');
+            const result = await ssh.execCommand('docker system prune -f');
             console.log('STDOUT: ' + result.stdout);
             console.log('STDERR: ' + result.stderr);
         } catch (err) {
