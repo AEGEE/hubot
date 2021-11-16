@@ -9,6 +9,6 @@ COPY ./utils /home/hubot/utils
 COPY ./package.json /home/hubot/package.json
 COPY ./external-scripts.json /home/hubot/external-scripts.json
 
-RUN npm install
+RUN npm ci
 
 ENTRYPOINT ["npx", "hubot", "-a", "slack"]
