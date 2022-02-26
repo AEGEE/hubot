@@ -17,7 +17,7 @@
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
     "hubot-slack": "^4.9.0",
-    "node-ssh": "^12.0.2"
+    "node-ssh": "^12.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
