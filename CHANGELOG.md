@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/AEGEE/hubot/compare/1.0.3...1.0.4) (2022-01-04)
+
+
+### Bug Fixes
+
+* **deps:** update to Node 16 and upgrade deps and CI config ([#119](https://github.com/AEGEE/hubot/issues/119)) ([1b3d00d](https://github.com/AEGEE/hubot/commit/1b3d00d049c38e06fa9ceac98886506da8d01d32))
+
 ## [1.0.3](https://github.com/AEGEE/hubot/compare/1.0.2...1.0.3) (2021-04-13)
 
 
