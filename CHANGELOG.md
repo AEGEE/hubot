@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/AEGEE/hubot/compare/1.0.4...1.1.0) (2023-03-13)
+
+
+### Features
+
+* **cleanup:** add cleanup script ([#58](https://github.com/AEGEE/hubot/issues/58)) ([26a433e](https://github.com/AEGEE/hubot/commit/26a433e502dfe75bf8d4f85ce61e619f6d5dc6fc))
+
 ## [1.0.4](https://github.com/AEGEE/hubot/compare/1.0.3...1.0.4) (2022-01-04)
 
 
