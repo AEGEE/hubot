@@ -39,6 +39,7 @@ jobs:
   shellcheck:
     docker:
       - image: cimg/base:2023.05
+    resource_class: large
     steps:
       - checkout
       - shellcheck/install
