@@ -13,9 +13,9 @@
 // Author:
 //   https://github.com/serge1peshcoff
 
-const { NodeSSH } = require('node-ssh');
 const path = require('path');
 const fs = require('fs');
+const { NodeSSH } = require('node-ssh');
 
 const { alwaysThread } = require('../utils/helpers');
 
