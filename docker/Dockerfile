@@ -1,4 +1,4 @@
-FROM node:18.18.0-alpine
+FROM node:21.5.0-alpine
 
 RUN adduser -s /bin/bash --disabled-password hubot
 USER hubot
