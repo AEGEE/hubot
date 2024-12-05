@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AEGEE/hubot/compare/1.1.0...1.1.1) (2024-12-05)
+
+
+### Bug Fixes
+
+* **ci:** update to Node 20 and update CircleCI config ([#448](https://github.com/AEGEE/hubot/issues/448)) ([8a9a936](https://github.com/AEGEE/hubot/commit/8a9a93627f83ee8720ed978353eae4e980659e7c))
+
 # [1.1.0](https://github.com/AEGEE/hubot/compare/1.0.4...1.1.0) (2023-03-13)
 
 
